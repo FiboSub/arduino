@@ -1,3 +1,4 @@
+#pragma once
 #include <Arduino.h>
 #include <Servo.h>
 
@@ -25,11 +26,6 @@ class BrushlessMotorsController
 private:
    servo upRightMotor, upLeftMotor, upBackMotor, forwardRightMotor, forwardLeftMotor; 
 public:
-  BrushlessMotorsController()
-  {
-   
-  }
-  void changeSpeed(MOTOR_NUMBER motor, int dutyCycle){
-
-  }
+  BrushlessMotorsController();
+  void changeSpeed(MOTOR_NUMBER motor, int dutyCycle);
 }
