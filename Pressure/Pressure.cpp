@@ -4,7 +4,7 @@
 void PressureSensor::readPressure()
 {
 
-    this.measuredVoltage = (5.0 / 1023.0) * (analogRead(sensorPin));
+    this.measuredVoltage = (parameter) * (analogRead(sensorPin));
 }
 float PressureSensor::getLastPressure(const PRESSURE_UNIT unit)
 {
