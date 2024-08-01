@@ -3,7 +3,7 @@
 #include <OneWire.h>
 #include <DallasTemperature.h>
 
-#define DATA_PIN_NUMBER 30
+#define DATA_PIN_NUMBER 47
 
 OneWire onewire(DATA_PIN_NUMBER);
 
@@ -12,13 +12,18 @@ DallasTemperature sensor(&onewire);
 TemperatureSensor::TemperatureSensor()
 {
     Serial.begin(9600);
-    sensors.begin();
+    sensor.begin();
 }
-float TemperatureSensor::LastTemperature()
+float TemperatureSensor::celsiusTemperature()
 {
-    sensors.requestTemperatures();
-    this.LastTemperature = sensors.getTempCByIndex(0);
-    delay(1000);
-    return LastTemperature;
+    sensor.requestTemperatures();
+    this->Temperature = sensor.getTempCByIndex(0);
+    return Temperature;
 }
+
+float TemperatureSensor::fahrenheitTemperature()
+{
+    sensor.requestTemperatures();
+    this->Ftemperature = (this->Temperature * 1.8) + 32.0;
+    return Ftemperature;
 }

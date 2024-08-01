@@ -5,9 +5,11 @@
 
 class TemperatureSensor {
 private:  
-    float lastTemperature; 
+    float Temperature; 
+    float Ftemperature;
 
 public:
-    void TemperatureSensor();
-    float LastTemperature();
+    TemperatureSensor();
+    float celsiusTemperature();
+    float fahrenheitTemperature();
 };
