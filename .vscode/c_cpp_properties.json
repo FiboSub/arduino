@@ -16,7 +16,6 @@
             ],
             "intelliSenseMode": "gcc-x64",
             "includePath": [
-                "C:\\Users\\Fateme\\Documents\\Arduino\\libraries\\DallasTemperature",
                 "C:\\Users\\Fateme\\AppData\\Local\\Arduino15\\packages\\arduino\\hardware\\avr\\1.8.6\\cores\\arduino",
                 "C:\\Users\\Fateme\\AppData\\Local\\Arduino15\\packages\\arduino\\hardware\\avr\\1.8.6\\variants\\mega",
                 "C:\\Users\\Fateme\\Documents\\Arduino\\libraries\\Servo\\src",
@@ -535,6 +534,23 @@
                 "__ATOMIC_RELEASE=3",
                 "__BUILTIN_AVR_FMUL=1",
                 "USBCON"
+            ]
+        },
+        {
+            "name": "pbt",
+            "compilerPath": "",
+            "compilerArgs": [],
+            "intelliSenseMode": "",
+            "includePath": [
+                "${workspaceFolder}/**"
+            ],
+            "forcedInclude": [],
+            "cStandard": "",
+            "cppStandard": "",
+            "defines": [
+                "_DEBUG",
+                "UNICODE",
+                "_UNICODE"
             ]
         }
     ]
