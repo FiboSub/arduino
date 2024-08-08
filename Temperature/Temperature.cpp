@@ -1,7 +1,4 @@
-#include <Arduino.h>
 #include "Temperature.h"
-#include <OneWire.h>
-#include <DallasTemperature.h>
 
 #define DATA_PIN_NUMBER 47
 

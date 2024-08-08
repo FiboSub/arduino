@@ -1,5 +1,4 @@
-#include <OneWire.h>
-#include <DallasTemperature.h>
+
 #include "Temperature.h"
 
 OneWire  ds(47);  

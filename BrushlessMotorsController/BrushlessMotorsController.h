@@ -21,11 +21,12 @@ enum MOTOR_NUMBER
   FORWARD_LEFT_MOTOR
 };
 
+
 class BrushlessMotorsController
 {
 private:
-   servo upRightMotor, upLeftMotor, upBackMotor, forwardRightMotor, forwardLeftMotor; 
+   Servo upRightMotor, upLeftMotor, upBackMotor, forwardRightMotor, forwardLeftMotor; 
 public:
   BrushlessMotorsController();
   void changeSpeed(MOTOR_NUMBER motor, int dutyCycle);
-}
+};

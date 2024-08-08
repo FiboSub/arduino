@@ -1,7 +1,7 @@
 #include "GPS.h"
 
-UbxGpsNavPvt<HardwareSerial> gps();
-HardwareSerial hw = static_cast<HardwareSerial>(Serial);
+UbxGpsNavPvt<HardwareSerial> gps(Serial2);
+
  
 GPSNEOM8N::GPSNEOM8N()
 {
@@ -13,7 +13,7 @@ void GPSNEOM8N::gpsReader()
 {
     if (gps.ready())
     {
-        snprintf(datetime, DATETIME_LENGTH, DATETIME_FORMAT, gps.year, gps.month, gps.day, gps.hour, gps.min, gps.sec);
+        // snprintf(datetime, DATETIME_LENGTH, DATETIME_FORMAT, gps.year, gps.month, gps.day, gps.hour, gps.min, gps.sec);
 
         Serial.print(datetime);
         Serial.print(',');
