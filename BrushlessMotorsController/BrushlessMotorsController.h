@@ -8,7 +8,8 @@ enum BRUSHLESS_MOTOR_CONNECTION_PIN
   UP_LEFT_MOTOR_CONNECTION_PIN = 3,
   UP_BACK_MOTOR_CONNECTION_PIN = 5,
   FORWARD_RIGHT_MOTOR_CONNECTION_PIN = 6,
-  FORWARD_LEFT_MOTOR_CONNECTION_PIN = 7
+  FORWARD_LEFT_MOTOR_CONNECTION_PIN = 7,
+  YAW_MOTOR_CONNECTION_PIN = 8
   // pwm pin numbers : 2 3 5 6 7 8 9 11 12 13 44 45 46
 };
 
@@ -18,14 +19,15 @@ enum MOTOR_NUMBER
   UP_LEFT_MOTOR,
   UP_BACK_MOTOR,
   FORWARD_RIGHT_MOTOR,
-  FORWARD_LEFT_MOTOR
+  FORWARD_LEFT_MOTOR,
+  YAW_MOTOR
 };
 
 
 class BrushlessMotorsController
 {
 private:
-   Servo upRightMotor, upLeftMotor, upBackMotor, forwardRightMotor, forwardLeftMotor; 
+   Servo upRightMotor, upLeftMotor, upBackMotor, forwardRightMotor, forwardLeftMotor,yawMotor; 
 public:
   BrushlessMotorsController();
   void changeSpeed(MOTOR_NUMBER motor, int dutyCycle);
